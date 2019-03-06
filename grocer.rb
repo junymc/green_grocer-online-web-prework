@@ -44,9 +44,9 @@ def apply_coupons(cart, coupons)
 
   coupons.each do |coupon|
     name = coupon[:item]
-    num_of_c = coupon[:num]
-    if cart.include?(name) && cart[name][:count] >= num_of_c
-      new_cart[name][:count] -= num_of_c
+    num_of_coupon = coupon[:num]
+    if cart.include?(name) && cart[name][:count] >= num_of_coupon
+      new_cart[name][:count] -= num_of_coupon
       if new_cart["#{name} W/COUPON"] == nil
         new_cart["#{name} W/COUPON"] = {
           price: coupon[:cost],
