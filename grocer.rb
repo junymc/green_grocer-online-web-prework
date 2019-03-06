@@ -24,7 +24,7 @@ end
 #         :clearance => "true",
 #         :count => coupon_hash[:num]
 #       }
-# 
+#
 #       if cart.key?(item)
 #         new_coupon_hash[:clearance] = cart[item][:clearance]
 #         if cart[item][:count] >= new_coupon_hash[:count]
@@ -41,7 +41,7 @@ def apply_coupons(cart, coupons)
   return cart if coupons == []
 
   new_cart = cart
-  
+
   coupons.each do |coupon|
     name = coupon[:item]
     num_of_c = coupon[:num]
